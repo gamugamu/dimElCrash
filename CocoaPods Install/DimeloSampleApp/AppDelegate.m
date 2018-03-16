@@ -10,20 +10,16 @@
 {
     Dimelo* dimelo = [Dimelo sharedInstance];
     dimelo.delegate = self;
-    
     //Authentify using build-in authentification
-    NSString* secret = @"<ENTER YOUR API SECRET HERE>";
+    NSString* secret = @"1be1da15ea940c87335dcfbe1f9205268205735c4d7c49b6991d41b44698916a";
     [dimelo setApiSecret:secret];
-
     // Authentify the user if you have an internal user_id otherwise this
     // is random
     dimelo.userIdentifier = @"application-user-id";
     dimelo.userName = @"John Doe";
-
     // Indicated in which environment your app is build
     // to receive APNs
     dimelo.developmentAPNS = NO;
-    
     return YES;
 }
 
